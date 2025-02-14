@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../context/isLoginContext';
 
 const Navbar = () => {
-  const noOfQuantity = 1;
-  const {putPopup} = useAppContext();
+  
+  const {putPopup , totalQuantity } = useAppContext();
   return (
      
      <div className='flex flex-row justify-between items-center p-4 '>
@@ -22,21 +22,21 @@ const Navbar = () => {
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to='/menu'
+                <NavLink to='/carte'
                 className = {({isActive}) => isActive ? "text-[var(--primary-color)] pb-1 border-b-2 transition-all duration-200":" "}              
                 >
                 Menu 
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to='/mobileapp'
+                <NavLink to='/carte'
                 className = {({isActive}) => isActive ? "text-[var(--primary-color)] pb-1 border-b-2 transition-all duration-200":" "}              
                 >
                 Mobile App
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to='/ok'
+                <NavLink to='/carte'
                 className = {({isActive}) => isActive ? "text-[var(--primary-color)] pb-1 border-b-2 transition-all duration-200":" "}              
                 >
                 Contact us 
@@ -48,8 +48,8 @@ const Navbar = () => {
         <div className='flex flex-row gap-[40px] items-center cursor-pointer'>
           <img src={assets.search_icon} alt='search-icon' className='w-[27px] h-[27px] ' />
           <div className='relative'>
-          <div className={noOfQuantity > 0 ? "absolute top-[-14px] right-[-1px] w-[20px] h-[20px] rounded-[50%] bg-[var(--primary-color)] flex justify-center items-center ":"hidden"}>
-               <p className='text-[12px] text-[var(--dark)]'>{noOfQuantity}</p>
+          <div className={totalQuantity >= 0 ? "absolute top-[-14px] right-[-1px] w-[20px] h-[20px] rounded-[50%] bg-[var(--primary-color)] flex justify-center items-center ":"hidden"}>
+               <p className='text-[12px] text-[var(--dark)]'>{totalQuantity}</p>
           </div>
           <NavLink to='/cart'>
               <img src={assets.basket_icon} alt='basket-icon' className='w-[29px] h-[30px]' />

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Card from "./pages/Card"
 import Placeorder from "./pages/Placeorder"
 import Homepage from "./pages/Homepage"
-
+import Header from "./components/Header"
 
 
 function App() {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
    
   },
   {
-    path:'/menu',
+    path:'/cart',
     element:
     <>
       <Card/>
@@ -29,6 +29,13 @@ const router = createBrowserRouter([
     element:
     <>
         <Placeorder/>
+    </>
+  },
+  {
+    path:'/header',
+    element:
+    <>
+        <Header/>
     </>
   },
 ])

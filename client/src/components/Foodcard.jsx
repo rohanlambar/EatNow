@@ -1,16 +1,35 @@
 import React, { useState } from 'react'
 import { useAppContext } from '../context/isLoginContext';
+import { updateToCart  } from '../redux/cartSlice';
+import { useDispatch } from 'react-redux';
 
 
-const Foodcard = ({image,name,description,price}) => {
+const Foodcard = ({image,name,description,price,identifier}) => {
   const [count,setCount] =  useState(0);
-  const {isLoginIn,putPopup} = useAppContext()
+  const {isLoginIn,putPopup ,setTotalQuantity} = useAppContext()
+  const dispatch = useDispatch()
   const addCount = ()=>{
-    if(isLoginIn) setCount((prev)=>prev+1);
+    if(isLoginIn){ setCount((prev)=>prev+1);
+      const foodItem = {
+            _id : identifier,
+            image : image,
+            name : name ,
+            price : price,
+            quantity : count,
+      };
+
+      console.log("going to update cart")
+      dispatch(updateToCart({item : foodItem}));
+      setTotalQuantity((prev)=>prev+1);
+    }
     else  putPopup();
   }
+
   const subCount = ()=>{
-    if(isLoginIn) setCount((prev)=>prev-1);
+    if(isLoginIn) {setCount((prev)=>prev-1);
+      setTotalQuantity((prev)=>prev+1);
+          
+    }
     else putPopup();
   }
   return (
@@ -18,7 +37,7 @@ const Foodcard = ({image,name,description,price}) => {
     <div className='w-full shadow-xl rounded-b-[20px] min-w-[300px]   hover:shadow-orange-200'>
         <div className='relative overflow-hidden rounded-t-[20px]  '>
         <img src={image} className='w-full h-full  hover:scale-110 transition-transform duration-300 '/>
-        {count==0?
+        {count === 0?
         <img src='src/assets/add_icon_white.png' className='absolute bottom-[15px] right-[15px] cursor-pointer'
         onClick={addCount}/>
       : <div className='flex gap-2 justify-center items-center rounded-[25px]  absolute bottom-[15px] right-[15px] bg-white p-1 '>

@@ -23,6 +23,7 @@ const Foodlist = () => {
           name={food.name}
           description={food.description}
           price={food.price}
+          identifier={food._id}
           />
           
           </>

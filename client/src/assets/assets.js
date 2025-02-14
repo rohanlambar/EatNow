@@ -86,7 +86,9 @@ export const assets = {
     parcel_icon,
     google_logo,
     facebook_logo,
-    food_1
+    food_1,
+    food_2,
+    food_3,
 }
 
 export const menu_list = [

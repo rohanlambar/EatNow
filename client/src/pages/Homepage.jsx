@@ -15,14 +15,14 @@ const Homepage = () => {
     <div>
         <div className='w-[80%] m-auto'>
             <Navbar/>
-            <Menulist/>
+            <Menulist id='menu'/>
             <Foodlist/>
             {showPopup && <Loginpopup/>}
             
-            <Mobileapp/>
+            <Mobileapp id='mobileapp '/>
             
         </div>
-        <Footer/>
+        <Footer id='footer'/>
     </div>
     
   )
