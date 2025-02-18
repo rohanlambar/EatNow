@@ -22,7 +22,7 @@ const Card = () => {
                     <Navbar/>
 
                                 {/* this code for cart page */}
-                                <div className='flex flex-col gap-20 mt-20'>
+                                <div className='flex flex-col gap-20 '>
                                     <div className=' mx-auto mt-10  min-h-[200px] min-w-[100%]'>
                                     <div>
                                         <div className=' grid grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr] text-[var(--gray)] text-[max(1vw,10px)] '>
@@ -68,7 +68,9 @@ const Card = () => {
                                                     placeholder='Promo Code'
                                                     className=' h-full flex-1 rounded-l-sm bg-[#EAEAEA] p-3 outline-none border-none'/>
                                                     <button
-                                                    className='w-[max(10vw,150px)] h-full bg-[var(--dark)] text-white rounded-sm p-3'>
+                                                    className='w-[max(10vw,150px)] h-full bg-[var(--dark)] text-white rounded-sm p-3'
+
+                                                    >
                                                         Submit
                                                     </button>
                                                 </div >

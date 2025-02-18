@@ -6,7 +6,7 @@ const LoginContext = createContext();
 
 export const AppProvider = ({children})=>{
  const [isLoginIn,setIsLoginIn] = useState(true);
- const [showPopup,setShowPopup] = useState(false);
+ const [showPopup,setShowPopup] = useState(true);
  const [totalQuantity,setTotalQuantity] = useState(0);
  const setLoggedOut = ()=>setIsLoginIn(false);
  const setLoggedIn = ()=>setIsLoginIn(true);

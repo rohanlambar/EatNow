@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     </>
   },
   {
-    path:'/test',
+    path:'/checkout',
     element:
     <>
         <Placeorder/>
