@@ -3,11 +3,11 @@
 EatNow is a **food preordering system** designed for students to order meals from the canteen before their break. Payments are made in advance, and after some time, students receive their orders. The system also includes an **admin panel** for managing the menu and orders efficiently.
 
 ## Screenshots
+![Homepage](project/screenshots/homepage.png)
+![Login Page](project/screenshots/login.png)
 
-![Login Page](screenshots/login.png)
-![Homepage](screenshots/homepage.png)
-![Cart ](screenshots/cart.png)
-![Checkout](screenshots/checkout.png)
+![Cart ](project/screenshots/cart.png)
+![Checkout](project/screenshots/checkout.png)
 
 
 ## Features
