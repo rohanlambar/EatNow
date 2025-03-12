@@ -3,12 +3,12 @@
 EatNow is a **food preordering system** designed for students to order meals from the canteen before their break. Payments are made in advance, and after some time, students receive their orders. The system also includes an **admin panel** for managing the menu and orders efficiently.
 
 ## Screenshots
-![Homepage](project/screenshots/homepage.png)
-![Login Page](project/screenshots/login.png)
 
-![Cart ](project/screenshots/cart.png)
-![Checkout](project/screenshots/checkout.png)
+![Homepage](screenshots/homepage.png)
+![Login Page](screenshots/login.png)
 
+![Cart ](screenshots/cart.png)
+![Checkout](screenshots/checkout.png)
 
 ## Features
 
@@ -16,7 +16,6 @@ EatNow is a **food preordering system** designed for students to order meals fro
   - Preorder food before break time.
   - Pay before or after ordering.
   - Receive notifications when the order is ready.
-  
 - **Admin Panel**:
   - Dashboard with order statistics.
   - Menu management (add/edit/delete items).
@@ -106,7 +105,6 @@ npm start
 - `POST /api/admin/menu` - Add new menu item
 - `DELETE /api/admin/menu/:id` - Remove menu item
 
-
 ## License
 
 This project is licensed under the **MIT License**.
@@ -114,4 +112,3 @@ This project is licensed under the **MIT License**.
 ## Contact
 
 For questions or suggestions, reach out at **your-email@example.com**.
-
